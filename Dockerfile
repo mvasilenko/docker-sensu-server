@@ -5,7 +5,7 @@ MAINTAINER Hiroaki Sano <hiroaki.sano.9stories@gmail.com>
 
 # Basic packages
 RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
-  && yum -y install passwd sudo git wget openssl openssh openssh-server openssh-clients selinux-policy
+  && yum -y install passwd sudo git wget openssl openssh openssh-server openssh-clients selinux-policy jq
 
 # Create user
 RUN useradd hiroakis \
