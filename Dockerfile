@@ -18,7 +18,7 @@ RUN yum install -y redis
 
 # RabbitMQ
 RUN yum install -y socat \
-  && https://github.com/rabbitmq/erlang-rpm/releases/download/v20.3.8.14/erlang-20.3.8.14-1.el7.centos.x86_64.rpm \
+  && rpm -Uvh https://github.com/rabbitmq/erlang-rpm/releases/download/v20.3.8.14/erlang-20.3.8.14-1.el7.centos.x86_64.rpm \
   && rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc \
   && rpm -Uvh https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.9/rabbitmq-server-3.7.9-1.el7.noarch.rpm \
   && git clone git://github.com/joemiller/joemiller.me-intro-to-sensu.git \
